@@ -1,15 +1,40 @@
->- #theme: jekyll-theme-minimal
+title: Just the Docs Tests
+# email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  This site tests some features of Just the Docs, a remote theme for Jekyll on GitHub Pages.
+baseurl: "/just-the-docs-tests" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: jekyllrb
+# github_username:  jekyll
+
+# logo: "/assets/images/just-the-docs.png"
+
+# Build settings
+# theme: minima
 remote_theme: pmarsceill/just-the-docs@v0.3.3
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
 
-title: Just blog
-# email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  This site tests some features of Just the Docs, a remote theme for Jekyll on GitHub Pages.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
 
 defaults:
   -
