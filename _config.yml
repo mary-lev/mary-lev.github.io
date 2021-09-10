@@ -46,5 +46,5 @@ defaults:
 
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs Tests on GitHub":
+  "Maria Levchenko on GitHub":
     - "//github.com/mary-lev/blog"
