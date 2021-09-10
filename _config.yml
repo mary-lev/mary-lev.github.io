@@ -43,3 +43,8 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+
+# Aux links for the upper right navigation
+aux_links:
+  "Just the Docs Tests on GitHub":
+    - "//github.com/mary-lev/blog"
