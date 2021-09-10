@@ -1,5 +1,12 @@
 theme: jekyll-theme-minimal
 
+title: Just blog
+# email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  This site tests some features of Just the Docs, a remote theme for Jekyll on GitHub Pages.
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
 defaults:
   -
     scope:
