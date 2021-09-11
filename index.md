@@ -1,4 +1,8 @@
-# test page
+---
+title: Home
+layout: page
+---
+# Home of Concordances
 
 Просто какой-то текст
 
