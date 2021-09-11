@@ -1,8 +1,8 @@
 ---
-title: Admonitions
+title: First page
 nav_order: 3
 ---
-# Admonitions
+# First page
 
 Support for common markdown callouts like NOTE, TIP, HINT has been [requested](https://github.com/pmarsceill/just-the-docs/issues/171) as an enhancement for Just the Docs.
 
