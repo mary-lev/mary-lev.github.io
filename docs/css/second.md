@@ -1,5 +1,5 @@
 ---
-title: Second
+title: Second page
 nav_order: 4
 ---
 # List Labels
