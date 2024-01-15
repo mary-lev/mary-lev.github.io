@@ -1,81 +1,69 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: SPbLitGuide 1999–2020
+description: Social Network and GeoData Analysis
+img: assets/img/15.jpg
 importance: 2
 category: work
-giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+<a href="https://spblitguide.streamlit.app/">The project SPbLitGuide 1999–2020</a> focuses on constructing and analyzing a dataset derived from <a href="https://isvoe.ru/spblitgid/">SPbLitGuide, a newsletter initiated by Daria Sukhovey</a> in May 1999. SPbLitGuide is notable for its comprehensive coverage of upcoming literary events in St. Petersburg, providing valuable insights into the city's cultural activities. The dataset encompasses 1,255 issues released up to October 2019, representing a significant aggregation of literary event data.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+The project aims to:
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+- Systematically transform the corpus of newsletters into a structured, accessible dataset.
+- Perform preliminary analyses as a foundation for deeper scholarly research into St. Petersburg's literary scene.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+## Target Audience
+- Academic Researchers: Ideal for scholars in literary studies, cultural analysis, and social sciences, this dataset lays the groundwork for longitudinal research in understanding the literary dynamics of St. Petersburg.
+- Cultural Analysts and Historians: The preliminary analysis and structured data offer an entry point for exploring historical shifts in literary venues, themes, and community participation.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Potential Applications
+The cleaned and structured dataset offers valuable insights into the literary landscape of St. Petersburg, facilitating analyses such as trends in literary events, identification of key venues, and community engagement over two decades.
+
+## Additional Data Representations
+- Literary Life Map of St. Petersburg: Geographic locations for 862 venues were identified and mapped.
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/15.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/17.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+     Literary places map of Saint Petersburg
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+- Graph of Persons: A graph depicting individuals who have participated in events over the 20-year span was compiled, using named entity recognition and neural network techniques.
 
-{% raw %}
-
-```html
 <div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/16.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/18.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
-```
+<div class="caption">
+     Literary Network and Communities of Saint Petersburg
+</div>
 
-{% endraw %}
+## Tools and Technologies Used
+The following tools and technologies were instrumental in the development and analysis of the dataset:
+
+- Data Extraction and Cleaning: Tools such as Python’s Pandas library for data manipulation, Regular Expressions (Regex) for pattern matching and text extraction, and BeautifulSoup for parsing and handling HTML content from the newsletters.
+- Named Entity Recognition (NER): The DeepPavlov and Natasha libraries for Russian language processing, utilized for identifying and extracting specific entities like names, dates, and places from the text.
+- Data Visualization and Mapping: Geographic Information System (GIS) tools for creating the Literary Life Map of St. Petersburg and network analysis tools for developing the Graph of Characters.
+- Text Analysis: Focusing on Natural Language Processing (NLP) techniques and leveraging pre-built NLP models for text analytics.
+- Database Management: PostgreSQL for database handling and management of the structured dataset.
+- Data Publishing: The cleaned dataset is available on Zenodo in CSV format {% cite levchenko_2023_10086515 %}, and the data processing code <a href ="https://github.com/mary-lev/spblitguide">is hosted on GitHub</a>, ensuring accessibility and reproducibility of the research.
+
+The SPbLitGuide Data Analysis Project employs text analytics and machine learning to create a comprehensive dataset, coupled with preliminary analysis. This serves as a crucial resource for those interested in a detailed study of St. Petersburg's literary landscape.
+
+## References
+
+{% reference levchenko_2023_10086515 %}
+
+{% reference levchenko_inprogress_mapping %}
