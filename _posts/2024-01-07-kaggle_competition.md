@@ -24,20 +24,20 @@ This fairly simple news classification competition was run by the Faculty of Com
 </div>
 
 ## The Challenge
-The task was to predict news topics without any training data. Our goal was to classify news into categories such as 'Society/Russia', 'Science and Technology' and more. The unique aspect was that we obtained our training data by scraping news sites. To tackle this, I first carefully explored the test data. This exploration was crucial in deciding which specific data to analyse. As a result, I collected data from Lenta.Ru for four years and Fontanka.Ru for three years.
+The task was to predict news topics. We were to categorize news as ‘Society/Russia’, ‘Science and Technology’, and other types. Our unique idea was to accumulate training data by scraping news sites. To solve this problem, I first carefully probed the test data. This exploration was very important to selecting which specific data to analyze. As a result, I collected material for three years from Lenta. Ru and four years from Fontanka. Ru.
 
 ## Complexity or Simplicity?
-Initially I dabbled with complex models such as CatBoost and XGBoost, and even tried advanced transformers, but these didn't produce the desired results. This led me to a pivotal moment where I decided to embrace simplicity. Using basic techniques such as CountVectorizer and TfidfVectorizer, along with Logistic Regression, I developed a model that was not only efficient, but surprisingly more effective than the complex alternatives.
+At first, I thought about using a less complex model like CatBoost or XGBoost,even went the route of testing out a bit of advanced transformers. I didn't get what I wanted from any of these That took me to the next phase, one in which I decided to rely on the simple side. Using basic techniques like CountVectorizer and TfidfVectorizer, combined with Logistic Regression, I made not only a model that was efficient but amazingly more effective than complex alternatives.
 
 ## The Results: A Clear Victory for Simplicity
 
-The approach was successful, achieving accuracy scores of 0.92 with CountVectorizer and 0.93 with TfidfVectorizer. The competition's final scores were particularly impressive, with a public accuracy of 0.98548 and a private score of 0.98756. These figures demonstrate the effectiveness of a well-considered, simple approach over more complex ones.
+The approach was successful, with accuracy scores of 0.92 on CountVectorizer and 0.93 on TfidfVectorizer. The final results of this competition were particularly impressive. The public accuracy was 0.98548 and the private score was 0.98756. These numbers demonstrate that carefully-made simple approaches can surpass more intricate ones in efficiency.
 
 In the spirit of community and collaboration, I've uploaded <a href="https://www.kaggle.com/marialevchenko/datasets">both datasets used in this competition to Kaggle</a>. I hope that these resources will help future explorers in their data science pursuits. 
 
 ## Exploring Further: Topic Modeling in Russian News
 
-The competition inspired me to explore topic modeling within Russian news texts. I was motivated by my work on news classification. I hope to uncover how subjects and lexicon in Russian news have evolved over the last three years. The purpose of this journey into topic modeling is to gain deeper insights into the shifts in societal and cultural narratives as reflected in the media. This project is ongoing, and I'll keep you updated with my findings as they unfold. This project has sparked a new avenue of research and discovery in the ever-evolving world of data science.
+The competition inspired me to explore topic modeling within Russian news texts. I was motivated by my work on news classification. I hope to uncover how subjects and lexicon in Russian news have evolved over the last three years. The purpose of this journey into topic modeling is to gain deeper insights into the shifts in societal and cultural narratives as reflected in the media. This project is ongoing, and I'll keep you updated with my findings as they unfold. 
 
 {::nomarkdown}
 {% assign jupyter_path = "assets/jupyter/news-classification.ipynb" | relative_url %}
