@@ -10,7 +10,9 @@ toc:
   sidebar: left
 ---
 
-I have won <a href="https://www.kaggle.com/competitions/news-scraping-competition/overview">my first Kaggle competition</a>. This fairly simple news classification competition was run by the Faculty of Computer Science (FCS) at the Higher School of Economics (HSE) as part of their bootcamp. What made this win special was how I achieved it: through a simple yet effective approach.
+It was <a href="https://www.kaggle.com/competitions/news-scraping-competition/overview">my first kaggle competition</a>, and I have won it!
+
+This fairly simple news classification competition was run by the Faculty of Computer Science (FCS) at the Higher School of Economics (HSE) as part of their bootcamp. What made this win special was how I achieved it: through a simple yet effective approach.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
