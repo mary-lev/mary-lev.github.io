@@ -5,7 +5,7 @@ title: cv
 nav: true
 nav_order: 5
 cv_pdf: Maria_Levchenko_Python_NLP.pdf
-description: Download it in pdf format
+description: 
 toc:
   sidebar: left
 ---
