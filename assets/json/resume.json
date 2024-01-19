@@ -30,7 +30,11 @@
       "startDate": "2019-12-21",
       "endDate": "2020-12-20",
       "summary": "EPAM Systems, Inc. is a global provider of software engineering and IT consulting services headquartered in Newtown, Pennsylvania, United States. The company has software development centers and branch offices in North America, Europe, Asia and Australia.",
-      "highlights": ["Python", "Flask", "ML pipelines", "NLP algorithms", "OCR", "AWS"]
+      "highlights": [
+        "Developed ML model pipelines to recognise tabular data from medical articles and reports (Flask, paddleOCR)",
+        "Implemented ML model evaluation metrics for order volume prediction",
+        "Python, Flask, ML pipelines, NLP algorithms, OCR, AWS"
+      ]
     },
     {
       "name": "Welltory Inc.",
@@ -207,10 +211,24 @@
     {
       "name": "LeggoManzoni: Quaranta commenti alla Quarantana",
       "summary": "An innovative project developed in Bologna University, aiming to integrate digital technologies into everyday teaching practices. It provides educators with a tool for an interactive approach to reading an Italian literature classic: Alessandro Manzoni's The Betrothed (I promessi sposi).",
-      "highlights": ["Node.js", "NLP algorithms", "XML", "TEI"],
+      "highlights": [
+        "Development of an interactive web platform for teachers of Italian literature on Node.js",
+        "Implementation of an algorithm to convert, link and display the text of the novel and its 40 commented editions (Python/JavaScript)",
+        "Node.js, NLP algorithms, XML, TEI"
+      ],
       "startDate": "2023-05-01",
       "endDate": "2023-12-25",
       "url": "https://projects.dharc.unibo.it/leggomanzoni/"
+    },
+    {
+      "name": "Pavlov's Dog",
+      "highlights": [
+        "Implemented NLP algorithms for a no-code educational platform for UX/UI design and content creation courses",
+        "came up with a system of automatic evaluation of students' answers based on 4 indices, which were included in the certificate of completion",
+        "Python, JavaScript, GoogleSheets API, NLP algorithms"
+      ],
+      "startDate": "2020-09-01",
+      "endDate": "2020-12-25"
     }
   ]
 }
