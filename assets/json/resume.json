@@ -222,8 +222,9 @@
     },
     {
       "name": "Pavlov's Dog",
+      "summary": "No code learning platform for UX/UI design and content creation courses",
       "highlights": [
-        "Implemented NLP algorithms for a no-code educational platform for UX/UI design and content creation courses",
+        "Implemented ML pipeline based on NLP algorithms for automatic analysis of student responses and user feedback",
         "came up with a system of automatic evaluation of students' answers based on 4 indices, which were included in the certificate of completion",
         "Python, JavaScript, GoogleSheets API, NLP algorithms"
       ],
