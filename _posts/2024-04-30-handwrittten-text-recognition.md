@@ -11,7 +11,7 @@ toc:
   sidebar: left
 ---
 
-<img src="https://github.com/mary-lev/mary-lev.github.io/blob/master/assets/img/HTR.jpg" />
+<img src="https://github.com/mary-lev/mary-lev.github.io/blob/32bd95bd10a05ca9cb3ffa3be752612223abc6cf/assets/img/HTR.jpg" />
  <div class="col-sm-3">
     <img class="card-img" src="{{post.thumbnail | relative_url}}" style="object-fit: cover; height: 90%" alt="image">
   </div>
