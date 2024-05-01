@@ -6,7 +6,7 @@ description: HTR presentation
 tags: HTR, ATR, transformers, YOLO, TrOCR, manuscripts
 categories: ML, talks
 related_posts: true
-thumbnail: HTR.jpg
+thumbnail: https://raw.githubusercontent.com/mary-lev/mary-lev.github.io/master/assets/img/HTR.jpg
 toc:
   sidebar: left
 ---
