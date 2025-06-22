@@ -2,7 +2,7 @@
 layout: page
 title: ALTO-to-TEI Converter
 description: Document Processing Toolkit for eScriptorium Output
-img: assets/img/publication_preview/publishing.webp
+img: assets/img/alto_to_tei.png
 importance: 3
 category: work
 github: https://github.com/mary-lev/alto2tei

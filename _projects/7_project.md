@@ -2,7 +2,7 @@
 layout: page
 title: BertAlign API
 description: Multilingual Sentence Alignment Service for DiScEPT Project
-img: assets/img/publication_preview/publishing.webp
+img: assets/img/discept.png
 importance: 7
 category: work
 github: https://github.com/mary-lev/bertalign-api
