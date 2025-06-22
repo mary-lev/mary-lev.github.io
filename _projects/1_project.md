@@ -1,14 +1,13 @@
 ---
 layout: page
 title: LeggoManzoni
-description: Quaranta commenti alla Quarantana
+description: Multilingual Digital Edition of Alessandro Manzoni's Novel "I Promessi Sposi" with Comments
 img: assets/img/13.jpg
 importance: 1
 category: work
 related_publications: true
 ---
-
-["Leggo Manzoni: Quaranta commenti alla Quarantana"](https://projects.dharc.unibo.it/leggomanzoni/) is an innovative project developed in [Bologna University](https://www.unibo.it/) and [the Digital Humanities advanced research center (DH.arc)](https://centri.unibo.it/dharc/en/research/projects-at-dh-arc) by Ersilia Russo, Beatrice Nava, Maria Levchenko and Giulia Menna, aiming to integrate digital technologies into everyday teaching practices. It provides educators with a tool for a more interactive approach to reading an Italian literature classic: Alessandro Manzoni's "The Betrothed" ("I promessi sposi"). 
+[&#34;Leggo Manzoni: Quaranta commenti alla Quarantana&#34;](https://projects.dharc.unibo.it/leggomanzoni/) is an innovative project developed in [Bologna University](https://www.unibo.it/) and [the Digital Humanities advanced research center (DH.arc)](https://centri.unibo.it/dharc/en/research/projects-at-dh-arc) by Ersilia Russo, Beatrice Nava, Maria Levchenko and Giulia Menna, aiming to integrate digital technologies into everyday teaching practices. It provides educators with a tool for a more interactive approach to reading an Italian literature classic: Alessandro Manzoni's "The Betrothed" ("I promessi sposi").
 
 This web application stands out for its interactive interface, presenting the text of the Quarantana edition of the novel, enriched with 40 critical comments and an illustrative apparatus. The project exemplifies a digital resource for teaching, born from the collaboration between schools and universities. It aims to impart students with cross-disciplinary skills through the use of digital resources. "Leggo Manzoni" not only facilitates an understanding of the novel through various critical perspectives but also encourages deeper analysis, allowing students to actively interact with the text and comments, thereby enhancing their analytical skills.
 

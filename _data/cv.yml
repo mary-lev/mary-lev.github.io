@@ -86,3 +86,8 @@
       institution: Digital Humanities Research
       year: 2024
       description: Comprehensive evaluation framework comparing traditional NER approaches with modern LLM-based methods on Russian cultural texts. Features modular system supporting spaCy, DeepPavlov, and OpenAI models with statistical significance testing on SPbLitGuide dataset (15,012 cultural event records, 1999-2019).
+
+    - title: "EU Export Sanctions Analysis: Trade Discrepancies Detection"
+      institution: Economic Data Analysis Research
+      year: 2024
+      description: Streamlit-based analytical platform examining export-import data discrepancies under EU sanctions against Russia. Identifies anomalous trade patterns through intermediary countries (Kyrgyzstan +344.8%, Armenia +148.9%) using Eurostat data and statistical analysis to detect potential sanctions circumvention.
