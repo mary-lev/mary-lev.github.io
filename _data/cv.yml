@@ -71,3 +71,8 @@
       institution: DiScEPT Project - Istituto Italiano di Studi Germanici
       year: 2024
       description: FastAPI-based web service for multilingual sentence alignment using LaBSE embeddings, developed as part of DiScEPT (Digital Scholarly Editions Platform and aligned Translations). Supports 25 languages, TEI XML documents, and flexible alignment patterns for digital scholarly editions.
+
+    - title: "ALTO-to-TEI Converter: Document Processing Toolkit"
+      institution: Digital Humanities Research
+      year: 2024
+      description: Python toolkit for converting eScriptorium ALTO XML files to TEI format with Segmonto ontology support. Features page-level and book-level conversion modes, YAML-driven configuration, and advanced cross-page paragraph merging for historical document processing.
