@@ -1,24 +1,34 @@
 {
   "basics": {
     "name": "Maria Levchenko",
-    "label": "NLP Engineer and Python Developer",
+    "label": "NLP Engineer / Python Developer / AI Enthusiast",
     "image": "",
     "email": "marylevchenko@gmail.com",
     "phone": "+39 (351) 8120615",
     "url": "https://mary-lev.github.io",
-    "summary": "4+ Years in Microservices Architecture & Web Development | Passionate about the integration of AI and software engineering for innovation and complex problem solving.",
+    "summary": "NLP Researcher with PhD in Russian Language and Literature and Python development experience, uniquely blending humanities background with technological skills. Specializing in digital humanities, multilingual digital editions, and computational literary studies.",
     "location": {
-      "address": "Localita Querce 46",
-      "postalCode": "40032",
-      "city": "Camugnano",
+      "address": "",
+      "postalCode": "",
+      "city": "St Petersburg / Bologna",
       "countryCode": "IT",
-      "region": "Bologna"
+      "region": ""
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "GitHub",
+        "username": "mary-lev",
+        "url": "https://github.com/mary-lev"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "maria-levchenko-39953284",
+        "url": "https://linkedin.com/in/maria-levchenko-39953284"
+      },
+      {
+        "network": "ORCID",
+        "username": "0009-0008-2649-0729",
+        "url": "https://orcid.org/0009-0008-2649-0729"
       }
     ]
   },
@@ -128,23 +138,74 @@
   ],
   "publications": [
     {
-      "name": "Commentare – Leggo Manzoni. Quaranta commenti alla Quarantana (con Giulia Menna e Beatrice Nava, in Italian)",
-      "publisher": "Manzoni e Leopardi in digitale. Idee e strumenti per la scuola, a cura di Ersilia Russo. Bologna, CLUEB, 2024.",
+      "name": "AI-Supported Scaffolded Learning for Teaching Python in Digital Humanities Education",
+      "publisher": "ADHO Digital Humanities Conference 2025",
+      "releaseDate": "2025",
+      "url": "https://dh2025.adho.org",
+      "summary": "Accepted for presentation at ADHO DH 2025"
+    },
+    {
+      "name": "TEI Encoding as a Unified Structure for Multilingual Digital Editions: The LeggoManzoni Case Study",
+      "publisher": "AIUCD-2025, Verona, Italy",
+      "releaseDate": "2025",
+      "url": "https://www.researchgate.net/profile/Maria-Levchenko-3/publication/391901196",
+      "summary": "Co-authored with Beatrice Nava and Ersilia Russo"
+    },
+    {
+      "name": "Evaluating Named Entity Recognition Models for Russian Cultural News Texts: From BERT to LLM",
+      "publisher": "arXiv preprint",
+      "releaseDate": "2025",
+      "url": "https://arxiv.org/pdf/2506.02589",
+      "summary": "Preprint available on arXiv"
+    },
+    {
+      "name": "Computational Analysis of Literary Communities: Event-Based Social Network Study of St. Petersburg 1999-2019",
+      "publisher": "Journal of Computational Literary Studies",
+      "releaseDate": "2025",
+      "url": "https://tuprints.ulb.tu-darmstadt.de/30141/",
+      "summary": "Conference paper accepted for publication"
+    },
+    {
+      "name": "Automatic Translation Alignment Pipeline for Multilingual Digital Editions of Literary Works",
+      "publisher": "Proceedings of the Computational Humanities Research Conference 2024",
       "releaseDate": "2024",
-      "summary": "About the project LeggoManzoni."
+      "url": "https://ceur-ws.org/Vol-3834/paper128.pdf",
+      "summary": "Pages 1086-1104, Aarhus University, Denmark"
     },
     {
       "name": "Mapping Literary Space: A Social Network from the Timeline of Cultural Events",
-      "releaseDate": "in progress",
-      "url": "https://mary-lev.github.io/",
-      "summary": "This study analyzes the social literary network in Saint Petersburg from 1999 to 2019 using social network analysis (SNA) within the digital humanities framework."
+      "publisher": "DH2024. Book of Abstracts, Zenodo",
+      "releaseDate": "2024",
+      "url": "https://doi.org/10.5281/zenodo.13761079",
+      "summary": "Pages 423-424, George Mason University, Washington, DC, USA"
     },
     {
-      "name": "Издательские стратегии в поле современной русской поэзии / Publishing Strategies in the Field of Contemporary Russian Poetry (in Russian)",
-      "publisher": "Артикуляция / Artikuljacija",
+      "name": "Commentare – Leggo Manzoni. Quaranta commenti alla Quarantana",
+      "publisher": "Manzoni e Leopardi in digitale. Idee e proposte per la scuola, Clueb, Bologna",
+      "releaseDate": "2024",
+      "url": "https://projects.dharc.unibo.it/leggomanzoni/",
+      "summary": "Co-authored with Giulia Menna and Beatrice Nava, pages 73-86"
+    },
+    {
+      "name": "Как можно улучшить ответы языковых моделей? Гайд по промтам",
+      "publisher": "SysBlok.ru",
+      "releaseDate": "2024",
+      "url": "https://sysblok.ru/knowhow/kak-mozhno-uluchshit-otvety-jazykovyh-modelej-gajd-po-promtam/",
+      "summary": "Guide on prompt engineering techniques for improving language model responses"
+    },
+    {
+      "name": "Как живут Digital Humanities в Китае: рассказ очевидца",
+      "publisher": "SysBlok.ru",
+      "releaseDate": "2024",
+      "url": "https://sysblok.ru/philology/kak-zhivut-digital-humanities-v-kitae-rasskaz-ochevidca/",
+      "summary": "Firsthand account of Digital Humanities development in China"
+    },
+    {
+      "name": "Издательские стратегии в поле современной русской поэзии / Publishing Strategies in the Field of Contemporary Russian Poetry",
+      "publisher": "Артикуляция / Artikuljacija, Volume 14",
       "releaseDate": "2021",
       "url": "http://articulationproject.net/10303",
-      "summary": "The article discusses the struggles of contemporary Russian poetry publishing, focusing on the sector's reliance on outdated samizdat strategies and its insular, unprofitable nature. It underscores the sector's difficulties with distribution and profitability, pointing to a constrained, self-referential literary community with limited market appeal."
+      "summary": "Analysis of contemporary Russian poetry publishing strategies and market dynamics"
     }
   ],
   "skills": [
@@ -209,27 +270,78 @@
   ],
   "projects": [
     {
-      "name": "LeggoManzoni: Quaranta commenti alla Quarantana",
-      "summary": "An innovative project developed in Bologna University, aiming to integrate digital technologies into everyday teaching practices. It provides educators with a tool for an interactive approach to reading an Italian literature classic: Alessandro Manzoni's The Betrothed (I promessi sposi).",
+      "name": "BertAlign API: Multilingual Sentence Alignment Service",
+      "summary": "FastAPI-based web service for multilingual sentence alignment using LaBSE embeddings, developed as part of DiScEPT (Digital Scholarly Editions Platform and aligned Translations). Supports 25 languages, TEI XML documents, and flexible alignment patterns for digital scholarly editions.",
       "highlights": [
-        "Development of an interactive web platform for teachers of Italian literature on Node.js",
-        "Implementation of an algorithm to convert, link and display the text of the novel and its 40 commented editions (Python/JavaScript)",
-        "Node.js, NLP algorithms, XML, TEI"
+        "Developed production-ready API service deployed on Google Cloud Run",
+        "Implemented semantic alignment using LaBSE embeddings for 25 languages",
+        "Created specialized TEI XML processing endpoints for digital humanities workflows",
+        "FastAPI, sentence-transformers, Docker, Google Cloud Run, TEI XML"
       ],
-      "startDate": "2023-05-01",
-      "endDate": "2023-12-25",
-      "url": "https://projects.dharc.unibo.it/leggomanzoni/"
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-31",
+      "url": "https://github.com/mary-lev/bertalign-api",
+      "keywords": ["DiScEPT", "IISG", "multilingual", "digital editions"]
     },
     {
-      "name": "Pavlov's Dog",
-      "summary": "No code learning platform for UX/UI design and content creation courses",
+      "name": "ALTO-to-TEI Converter: Document Processing Toolkit",
+      "summary": "Python toolkit for converting eScriptorium ALTO XML files to TEI format with Segmonto ontology support. Features page-level and book-level conversion modes, YAML-driven configuration, and advanced cross-page paragraph merging for historical document processing.",
       "highlights": [
-        "Implemented ML pipeline based on NLP algorithms for automatic analysis of student responses and user feedback",
-        "came up with a system of automatic evaluation of students' answers based on 4 indices, which were included in the certificate of completion",
-        "Python, JavaScript, GoogleSheets API, NLP algorithms"
+        "Implemented Segmonto ontology compliance for document structure classification",
+        "Developed YAML-driven configuration system for flexible document processing",
+        "Created cross-page paragraph merging with hyphenation handling",
+        "Built both page-level and book-level conversion modes for different use cases",
+        "Python, XML/TEI, YAML, eScriptorium, Segmonto ontology"
       ],
-      "startDate": "2020-09-01",
-      "endDate": "2020-12-25"
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-31",
+      "url": "https://github.com/mary-lev/alto2tei",
+      "keywords": ["TEI", "XML", "document processing", "digital humanities"]
+    },
+    {
+      "name": "Computational Analysis of Literary Communities",
+      "summary": "Event-based social network analysis of Saint Petersburg's literary landscape from 1999-2019 using SPbLitGuide newsletter data. Processes 15,012 cultural events involving 11,777 participants across 862 venues to map literary community formation.",
+      "highlights": [
+        "Processed 20 years of cultural event data using Python data science stack",
+        "Applied network analysis algorithms to identify 49 distinct literary communities",
+        "Developed data processing pipeline with entity recognition and geospatial mapping",
+        "Created interactive visualizations and statistical analysis of literary networks",
+        "Python, NetworkX, pandas, NLP, geospatial analysis, data visualization"
+      ],
+      "startDate": "2023-01-01",
+      "endDate": "2025-07-31",
+      "url": "https://github.com/mary-lev/literary_communities",
+      "keywords": ["network analysis", "computational literary studies", "digital humanities"]
+    },
+    {
+      "name": "LeggoManzoni: Quaranta commenti alla Quarantana",
+      "summary": "Interactive web platform for teaching Italian literature, providing 40 critical comments on Alessandro Manzoni's 'The Betrothed'. Developed at University of Bologna with XML/TEI processing and multilingual digital edition capabilities.",
+      "highlights": [
+        "Developed interactive web platform for Italian literature education",
+        "Implemented XML/TEI processing for text-commentary alignment",
+        "Created segment-level text correlation algorithms",
+        "Built responsive interface for educational use in secondary schools",
+        "Node.js, XML/TEI, JavaScript, digital editions, educational technology"
+      ],
+      "startDate": "2023-05-01",
+      "endDate": "2024-12-25",
+      "url": "https://projects.dharc.unibo.it/leggomanzoni/",
+      "keywords": ["digital editions", "TEI", "educational technology", "multilingual"]
+    },
+    {
+      "name": "Zemelah.online: Soviet Jewish Egodocuments Archive",
+      "summary": "Digital archive with computational text analysis of Soviet-era Jewish egodocuments. Features topic modeling with LDA, GPT-powered chatbot interface, and AI-assisted indexing for historical document discovery and analysis.",
+      "highlights": [
+        "Implemented topic modeling analysis using Latent Dirichlet Allocation (LDA)",
+        "Developed GPT-powered chatbot for thematic document queries",
+        "Created AI-assisted markup editor with pre-annotation using Claude",
+        "Applied sentiment analysis and word embeddings for semantic pattern mapping",
+        "Python, LDA, OpenAI GPT, topic modeling, historical text analysis"
+      ],
+      "startDate": "2020-01-01",
+      "endDate": "2025-06-30",
+      "url": "https://github.com/mary-lev/topic_modeling",
+      "keywords": ["topic modeling", "digital archives", "Jewish studies", "NLP"]
     }
   ]
 }
