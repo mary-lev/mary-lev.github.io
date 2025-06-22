@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://mary-lev.github.io/cv'>NLP Engineer / Python Developer / AI Enthusiast</a>
+subtitle: <a href='https://mary-lev.github.io/cv'>The Digital Alchemist of the Humanities</a>
 
 profile:
   align: right
@@ -16,8 +16,6 @@ latest_posts: true # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-
-## Maria: The Digital Alchemist of the Humanities
 
 Equal parts code whisperer and literary detective, Maria is a master's graduate from the University of Bologna who dances seamlessly between AI algorithms and 19th-century novels. By day, she builds intelligent learning systems that guide students through Python with scaffolded support. By night, she decodes the soul of Russian poetry using Word2Vec and aligns multilingual digital editions of *I promessi sposi* with scholarly precision.
 
