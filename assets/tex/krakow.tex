@@ -1,0 +1,423 @@
+% arara: lualatex: { synctex: yes, shell: yes, interaction: nonstopmode }
+% arara: biber
+% arara: lualatex: { synctex: yes, shell: yes, interaction: nonstopmode }
+% arara: lualatex: { synctex: yes, shell: yes, interaction: nonstopmode }
+%
+%
+%                               ,--,              
+%          ,---._             ,---.'|              
+%       .-- -.' \   ,----..  |   | :   .--.--.    
+%       |    |   : /   /   \ :   : |  /  /    '.  
+%       :    ;   ||   :     :|   ' : |  :  /`. /  
+%       :        |.   |  ;. /;   ; ' ;  |  |--`   
+%       |    :   :.   ; /--` '   | |_|  :  ;_     
+%       :         ;   | ;    |   | :.'\  \    `.  
+%       |    ;   ||   : |    '   :    ;`----.   \ 
+%   ___ l         .   | '___ |   |  ./ __ \  \  | 
+%  /    /\    J   :'   ; : .'|;   : ;  /  /`--'  / 
+% /  ../  `..-    ,'   | '/  :|   ,/  '--'.     /  
+% \    \         ; |   :    / '---'     `--'---'   
+%  \    \      ,'   \   \ .'                       
+%   "---....--'      `---`                         
+%                   
+%                                 Journal of 
+%                                 Computational
+%                                 Literary Studies
+%                                
+%                                 https://jcls.io
+%
+% Template for authors
+%
+% Structure of this template:
+% .
+% ├── README.md
+% ├── acknowlegements.tex <-- acknowledgements, funding information
+% ├── figures             <-- images and pictures
+% ├── fonts               <-- needed fonts 
+% ├── jcls.cls            <-- the latex document class
+% ├── logos               <-- the journal logos
+% ├── main.tex            <-- your content
+% ├── metadata            
+% │   ├── article.tex     <-- metadata provided by the journal editors
+% │   ├── self.bib        <-- metadata provided by the journal editors
+% │   └── authors.tex     <-- metadata provided by the authors
+% └── references.bib      <-- your biblatex bibliography
+%
+% This document needs to be compiled with
+% LuaLaTeX + Biber
+%
+%
+
+\documentclass{jcls}
+%
+%
+% The documentclass already loads a number of packages, amongst others:
+% - amsmath,amssym
+% - xcolor, graphicx
+% - babel, csquotes
+% - biblatex
+% - fontspec, microtype
+% - booktabs, longtable
+% - listings
+%
+% -----------------------------------------------
+
+\title{Computational Analysis of Literary Communities: Event-Based Social Network Study of St. Petersburg 1999-2019}
+% \subtitle{A subtitle, if you like}
+\shorttitle{Computational Analysis of Literary Communities}
+%
+%
+% \title and \shorttitle are mandatory, \subtitle can be omitted
+%
+% 
+
+%
+%
+% In order to anonymise your submission, the information on authors and 
+% affiliations have to be provided in the file: authors.tex
+%
+% Thanks and acknowledgements and funding
+% information have to be saved in: acknowledgements.tex
+% These information will also be anonymised automatically 
+%
+
+\keywords{social network analysis, cultural events, community detection, Saint Petersburg, contemporary Russian literature}
+%
+%
+% 4-6 meaningful keywords that describe the paper
+
+
+
+\dataavailability{Data can be found here: \url{https://zenodo.org/records/13753154}}
+\softwareavailability{Software can be found here: \url{https://github.com/mary-lev/literary_communities}}
+%
+%
+% Please anonymise your repositories with https://anonymous.4open.science/ or similar services 
+%
+%
+
+
+\addbibresource{references.bib}
+\usepackage{todonotes}
+%
+%
+% Save all your references in this Bib(La)TeX file
+%
+%
+
+
+\begin{document}
+
+\maketitle
+
+
+
+\begin{abstract}
+	This paper presents a computational analysis of literary networks in St. Petersburg from 1999 to 2019, using data from the SPbLitGuide newsletter and exploring cultural connections through event co-participation. By processing 15,012 cultural events with 11,777 participants in 862 venues, we reveal the structure and evolution of the literary network in post-Soviet Russia. Our methodology combines network, spatial, and temporal approaches, demonstrating how systematic event recording can capture patterns of literary community formation typically invisible to traditional literary history. The study covers the last decades of St. Petersburg's predominantly offline literary life before its digital and geopolitical disruptions, providing both a historical record and a methodological framework applicable to other cultural contexts. Our findings show a complex ecosystem characterised by dense local clusters, influential bridge figures, and distinct community boundaries, while documenting crucial shifts in the city's literary infrastructure over two decades.
+\end{abstract}
+
+
+\section{Introduction}
+Literary communities can be understood through multiple analytical lenses — aesthetic movements, stylistic affiliations, publication networks, institutional memberships, translation flows, or interpretive strategies. This study examines literary community formation through the material practices and embodied experiences of literary life: event co-participation, venue selection, and the situated social interactions that constitute the lived reality of literary culture. 
+
+Cultural events are pivotal sites for both the formation of literary communities and the circulation of cultural meanings. Here individual actors coalesce into recognizable communities, and exposure to dialogue, diverse voices, aesthetic positions, and creative practices shapes personal literary development. These gatherings serve as spaces where collective memory — shared understandings of literary tradition, influential figures, and aesthetic values — is performed and transmitted. Attending particular readings, discussions, or festivals reflects not only social affiliation but also intellectual curiosity and aesthetic preferences, creating communities bound together by both personal relationships and shared creative influences.
+
+These patterns of shared participation in readings, discussions, book launches, and festivals both reflect existing relationships and create new ones, forming complex networks of cultural association where aesthetic alignments manifest through social interaction. Yet these crucial patterns of literary life often remain invisible to historical analysis.
+
+This study presents a computational framework for mapping these networks through event participation, drawing on a unique dataset of cultural events in St. Petersburg from 1999 to 2019. By combining network analysis with spatial and temporal approaches, we describe the structure of literary life as it manifests in physical spaces and evolves over time, and the patterns of community formation in the cultural capital of post-Soviet Russia.
+
+This approach offers a distinct perspective that complements text-based analyses by exploring how communities are actively constituted and sustained through patterns of direct engagement in specific urban spaces and temporal rhythms. It captures ephemeral interactions that leave few textual traces, maps the concrete geographies and temporal rhythms of literary engagement, and brings to light the "hidden figures" — event organizers, moderators, and facilitators — who function as essential nodes in literary networks despite their absence from traditional publication metrics. 
+
+The literary ecosystem of St. Petersburg presents an optimal case study for this computational approach to cultural network analysis. As a metropolis with a historically rich tradition of literary salons and public readings, St. Petersburg has always been the perfect place to explore  literary communities. Our framework shows who participates in literary life and how, and generates spatio-temporal mappings of cultural interaction and offer new approaches to geocultural evolution.
+
+Significantly, our data  covers a transformative period in Russian cultural life. The years 1999-2019 witnessed major shifts: from Soviet-era divisions between official, unofficial and émigré literature to a more integrated literary field; from purely offline interaction to the use of internet tools to drive a community; and from chaotic and almost underground cultural movements to an increasingly commercialised literary infrastructure. Since 2020, this literary ecosystem has undergone even more dramatic changes — first through the forced digitisation of cultural life by the COVID pandemic, and then through the profound disruption and geographical dispersion of literary networks following the events of 2022. Our analysis thus preserves a detailed record of the last decades of a literary world that has since been fundamentally transformed.
+
+\section{Network Analysis in Literary Studies}
+
+The computational analysis of literary networks has evolved through distinct methodological paradigms, each implementing specific algorithmic approaches to capture different dimensions of literary relationships. Initial frameworks focused on three primary data architectures: the algorithmic extraction of character interaction networks (\cite{elson}), bibliometric analysis of publication and citation patterns (\cite{so}), and the computational mapping of translation flows (\cite{folica}). Moretti's seminal work (2005) established network visualization as a foundational analytical framework, subsequently expanded through contemporary investigations of digital literary spaces (\cite{basnet}).
+
+Traditional bibliometric approaches examine co-authorship patterns and publisher affiliations to reveal formal literary relationships. Institutional data provide information on organisational memberships and collaborations, while social media analysis enables the mapping of contemporary digital literary communities. Biographical sources — including memoirs, personal documentation and travel records — provide complementary evidence for understanding historical literary networks.
+
+Correspondence network analysis has proved particularly valuable in the study of historical literary figures. Notable projects include the \href{http://republicofletters.stanford.edu/}{Republic of Letters} and the \href{https://www.jessesadler.com/project/dvdm-correspondence}{correspondence network of early modern merchants}. While these analyses provide valuable insights into specific literary figures and their immediate connections, there are obvious limitations to their scope.
+
+While these approaches have significantly advanced our understanding of literary networks, we believe that the potential of network analysis extends far beyond texts, quotations, and correspondence. Cultural events — readings, discussions, festivals, and informal gatherings — represent a rich but largely untapped source of data on the formation of literary communities. These events reflect actual patterns of interaction and collaboration that often precede or exist independently of textual production. By treating event records as historical sources, we can examine how literary communities form and evolve through direct participation rather than through textual traces alone.
+
+\section{Event-Based Network Analysis}
+
+This event-based approach introduces an experimental framework for analysing literary networks, focusing on cultural events as the primary unit of interest. Here we have a possibility to observe direct social interactions as they occur in physical spaces. This direct observation reveals informal relationships and emerging communities that may never be recorded in published works or correspondence. This provides a different picture of how literary networks actually function.
+
+While social media analysis captures casual acquaintances and declared or performative connections, co-participation in events identifies deeper conceptual and aesthetic alignments between participants. Co-participation in poetry readings, book presentations or literary discussions indicates not only physical co-presence, but also meaningful cultural collaboration or artistic affinity. Moreover, event-based analysis describes interactions across generations, including influential figures from older cohorts who have never established a digital presence. This focus on real-world cultural engagement documents both operational and aesthetic relationships, revealing how literary networks function through concrete patterns of artistic collaboration and shared cultural projects.
+
+The event-based methodology captures a broader range of actors than traditional analyses. Beyond examining authors solely through their published works, the data reveals the organisational and curatorial activities performed by poets, writers, and other cultural actors who form literary life through event programming and community building. These figures, often invisible in traditional literary histories focused on textual production, emerge as key nodes in the network of cultural production and transmission through their dual roles as both creative practitioners and cultural mediators. They perform crucial mediating functions of gatekeeping (selecting speakers/themes), connecting (bringing together diverse participants), legitimizing (providing platforms for emerging voices), and framing (shaping how literary activities are perceived and categorized) (\cite{janssen2015}). This reveals how literary communities are sustained not only through textual creation but through the organizing labor that creates spaces for cultural exchange and collaboration.
+
+\subsection{Events as Community-Structuring Mechanisms}
+
+Cultural events serve as powerful mechanisms for structuring literary communities, creating patterns of interaction that sculpt the literary landscape. Events are not merely passive reflections of existing networks, but active sites where communities form and evolve. Each event contributes to the establishment of literary connections, while patterns of participation reveal how different groups within the literary world interact.
+
+The spatial dynamics of literary life matter. Venues vary in their centrality to literary life, and their geographical distribution affects patterns of access and participation. Some spaces become cultural hubs through repeated use, while others remain peripheral, creating distinct patterns of literary activity across the urban landscape. For example, some venues become regular meeting places for particular literary communities, while others facilitate interaction between different groups. The cultural geography of St. Petersburg creates hierarchies of venue appeal rooted in both practical accessibility and literary memory. Historically significant venues like the Podval Brodyachey Sobaki (Stray Dog Cellar) or the Pushkin Museum at Moyka 12 carry profound cultural resonance, connecting contemporary literary events to the city's literary past and adding symbolic weight that transcends their immediate practical function. Established institutions in the historic center benefit from this layered cultural prestige alongside mainstream visibility, making them accessible to diverse audiences and facilitating broad community interaction. In contrast, peripheral venues — local district libraries, night clubs, or alternative spaces in city margins — serve as essential spaces for literary communities that exist outside the mainstream cultural hierarchy: alternative groups who deliberately reject heritage culture and institutional legitimacy, and marginalized communities (such as naive poetry groups) who are excluded from prestigious venues. These peripheral spaces provide necessary cultural territory for authentic artistic expression beyond the constraints of official literary culture. This dynamic means that venue selection reflects not just aesthetic preferences but strategic decisions about cultural legitimacy, audience reach, and connection to St. Petersburg's literary tradition.
+
+\section{Saint Petersburg's Case}
+
+Event-based approach appears particularly promising for analysing the literary scene in St. Petersburg. The city's dense network of cultural institutions, which mix traditional venues (such as the Akhmatova Museum) with alternative spaces (such as the Poryadok Slov bookshop or the city's streets) and informal meeting places (including the apartment concerts, квартирники, that continue the Soviet tradition), provides an ideal setting for studying how physical spaces affect literary life. The spatial concentration of literary activity in the historical centre, particularly along Nevsky Prospekt and in the area between the Fontanka and Moika rivers, maintains historical patterns of cultural geography, while new literary spaces emerge in peripheral areas.
+
+The complex interaction between formal and informal literary circles in St. Petersburg makes it a natural case for the event-based approach. The coexistence of multiple cultural venues — from established academic institutions and state libraries to independent bookstores and experimental poetry bars — creates a rich field for studying how different literary groups interact with the city's environment. Event data includes large-scale events at major cultural institutions and informal gatherings in alternative spaces, giving a full picture of literary life at various scales and in different settings.
+
+\section{SPbLitGuide Dataset}
+
+The primary data corpus for the event-based exploration of the literary network is based on the SPbLitGuide newsletter (1999-2019) announcing upcoming literary events, an information bulletin that provides unprecedented longitudinal coverage of St. Petersburg's literary ecosystem. Initiated by the philologist and poet Darya Sukhovey, this chronicle project originated in the circles of experimental poetry and academic philology, although its scope expanded significantly over time. 
+
+The evolution of the newsletter can be traced through three distinct phases. The first phase established distribution through both email and web platforms (via Moscow poet Alexander Levin's website), primarily serving experimental and academic literary networks. A significant expansion took place in the second phase (2010-2015) through a collaboration with \textit{DK Krupskoy}, a permanent book fair in St. Petersburg. This partnership expanded the newsletter's coverage to include mainstream cultural events and commercial venues, creating a more nuanced representation of the city's literary life.
+
+In the third phase, beginning in 2015, the newsletter's archives and updates were collected and transferred to the digital platform of the independent publishing house \textit{Svoe Izdatelstvo}. Over the years, thanks to Darya Sukhovey's methodical approach, the newsletter maintained weekly periodicity and systematic documentation practices, resulting in a consistent and detailed record of both central and peripheral literary phenomena.
+
+The period from 1999 to 2019 came to an end prior to two significant disruptions: the COVID-19 pandemic's forced digitalisation of literary life and the 2022 war against Ukraine's fundamental reconfiguration of the cultural field. The latter caused a global dispersal of literary actors and new ideological break-ups within the community. The profound impact of these events is echoed in the newsletter's publication pattern: after February 2022, there was a one-year hiatus before publication resumed with a much reduced frequency (seven issues in 2023) and a modified scope.
+
+The scale of SPbLitGuide becomes clear when compared with similar projects. The Moscow-based \textit{MosLitGuide} project (2016-2020) by Anna Golubkova produced about 100 issues before being closed during the pandemic. The "Literary Life of Moscow" section of Dmitry Kuzmin's \textit{Vavilon.Ru} (1997-2003, also reproduced in print) published 66 issues. SPbLitGuide stands out with more than 1,400 issues, consistent documentation methods and wide-ranging coverage of the city's literary life.
+
+The newsletter's explicit selection principles, as stated by the curator, demonstrate a commitment to broad and unbiased coverage from the very start. It focused on publicly accessible literary events in St. Petersburg, presenting information without aesthetic evaluation to allow readers to make their own choices. The newsletter covered contemporary literary activities, including author readings, book launches, discussions of contemporary literature, and autograph sessions. While it excluded closed writing groups, routine activities of professional unions, and purely theatrical or musical events, it did include academic conferences on contemporary authors and art exhibitions related to the current literary situation. Significantly, with the permission of the organisers, it also documented informal events such as street actions and home readings. This deliberate inclusivity suggests that while the project originated in experimental poetry circles, its documentary approach aimed to capture the full spectrum of the city's literary landscape.
+
+\subsection{Event Entries and Role Identification}
+Event descriptions in the SPbLitGuide newsletter range from very brief notices to detailed multi-part announcements, but all consistently include the date, time, and place as core attributes. Addresses for all venues are typically listed at the end of each newsletter, which may include anywhere from one to thirty events per issue, depending on the season and level of cultural activity. The source of each entry — be it event organisers, venue owners, presenting authors or the curator herself — is often specified, and this variety of authorship results in significant stylistic diversity: some entries are concise and factual, while others are highly appraising or expressive. Below are two examples:
+\begin{quote}
+24.04.06 понедельник 19.00 Платформа \\
+Поэтический вечер. Александр Горнон.
+\end{quote}
+
+\begin{quote}
+    28.04.06 пятница 19.00 Библиотека им. Маяковского \\
+    «АЗиЯ-плюс» представляет. Юбилейный вечер к 70-летию Виктора Сосноры. В программе вечера примут участие: Виктор Соснора, артисты Сергей Дрейден и Лев Елисеев, музыканты Евгения Логвинова и Николай Якимов, а также петербургские литераторы и издатели. Будут представлены аудиокнига с авторским чтением стихов «В. Соснора. Избранное» из серии «Голос поэта» («АЗиЯ-плюс», 2006) и книга «Куда пошёл? И где окно?» (переиздание — СПб., «Пушкинский фонд», 2006) В фойе — выставки книг, архивных фотографий и авторской графики Сосноры.
+\end{quote}
+Almost every event description lists the names of active participants — such as speakers, performers, organizers, or moderators. Sometimes these roles are explicit; in other cases, they are implied by context. Alongside these, event texts may mention other individuals: as part of an organization’s name, as the subject of commemoration, or in promotional contexts highlighting connections with well-known figures. Although references to absent or associated figures can emphasise broader cultural connections, our analysis focuses on actual participation. Hence, we only extract the names of individuals who were directly involved in the events, as these represent veritable social connections within the literary community. 
+
+
+\section{Data processing pipeline}
+
+In 2015, during the migration of the newsletter to the \textit{Svoe Izdatelstvo} platform, the entire archive of previous letters was collected from the mailboxes of the maintainer and her friends, which formed the basis for the creation of the dataset. Since then, all new issues have been published through the same database, providing a secure and complete text corpus. The transformation of raw digital born data into a structured analytical dataset required the design and implementation of a multi-stage processing architecture (shown in Figure \ref{pipeline}).
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{figures/pipeline.png}
+	\caption{Data Processing Pipeline}
+    \label{pipeline}
+\end{figure}
+
+The pipeline begins with source data collection, where primary data is preserved in electronic mail (EML) format, preserving original message structures and metadata integrity. This initial corpus is then systematically converted into a structured database format within the WordPress environment, providing a stable storage layer with XML export functionality for future processing operations.
+
+The primary processing layer uses several Python tools to extract and structure the raw data. BeautifulSoup facilitates HTML parsing, while the Natasha library provides a specific processing feature for Russian language content. String matching operations are handled by the difflib library, complemented by regular expression processing for content extraction. 
+
+After initial processing, data is normalised to achieve consistency and compatibility. This stage standardises the extracted information and implements uniform data structures in preparation for the analysis stage. Geographical enrichment follows, using the Yandex API for coordinate extraction and address standardisation, enabling precise spatial mapping of literary events across St. Petersburg.
+
+The entity recognition layer is a critical component of the processing architecture. Building on the systematic evaluation of NER models for Russian cultural texts (\cite{lev2024ner}), a multi-stage automated pipeline with final manual validation was implemented. This stage used DeepPavlov's multilingual BERT model for named entity recognition, followed by a post-processing step to handle Russian grammatical forms, different writing styles, patronymics and institution names.
+
+The automated pipeline continued with entity enrichment, where identified entities were automatically mapped to VIAF and Wikidata identifiers using their respective APIs. This automated enrichment process significantly improved the interoperability of the dataset with other cultural heritage resources. The entire dataset was then manually validated as a final quality control step, verifying both the entity recognition results and the automated identifier assignments.
+
+The final stage focuses on network analysis, using NetworkX for graph construction and implementing community detection algorithms. This layer enables the computation of various network metrics, providing the analytical basis for understanding the structure and evolution of the St. Petersburg literary communities.
+
+The execution of this pipeline has produced significant results, successfully processing 15,012 discrete event instances and identifying 11,777 normalised attendee entities. The pipeline has also mapped 862 venue nodes to 817 unique geospatial coordinates and documented over 100,000 attendance records.
+
+Yet, processing the SPbLitGuide dataset presented several significant procedural challenges, particularly in the areas of entity recognition and normalisation. Three main categories of challenges arise during the data processing implementation.
+
+First, the complexity of name variations caused a significant difficulty for entity recognition. The dataset contained multiple representations of the same individual across different events and time periods. For example, a single author could appear as both a patronymic and diminutive full name, or with different combinations of initials and surnames. This complexity was multiplied by the diverse cultural origins of the names in the dataset, ranging from Russian and post-Soviet to European and Asian naming conventions. The literary nature of the dataset also introduced different formatting conventions, including the use of pseudonyms, artistic names and alternative spellings.
+
+Second, contextual ambiguity created significant issues for accurate entity resolution. Names often appeared in multiple roles within event descriptions - as organisers, participants or referenced authors - requiring careful disambiguation. The dataset often contained references to historical figures alongside contemporary participants, requiring a distinction to be made between actual event participants and mentioned personalities. This complexity was particularly evident in events such as literary commemorations or academic conferences, where historical figures were often referenced but not present.
+
+Thirdly, the mixed use of formal and informal name presentations required additional attention. The integration of multilingual content, particularly for international events or cross-cultural literary gatherings, added another layer of complexity to the processing pipeline.
+
+The processing combined DeepPavlov/Natasha libraries for initial normalization, Levenshtein distance calculations to merge name variants of the same individuals, and context-based analysis of event descriptions to distinguish different persons with similar names, with manual validation of all suggestions. The resulting dataset implements a relational structure optimised for network analysis and spatio-temporal queries (Figure \ref{figures/datamodel}). The data model comprises five core entities: events serve as the central unit linking persons, venues, addresses, and participation records. This architecture enables diverse analytical queries: tracking individual activity across communities and venues, mapping geographical clustering of communities, analysing temporal patterns in event types and participation, identifying bridge and key figures, and measuring spatial evolution of literary activity. The full technical specification and dataset are available via Zenodo (\cite{dataset}).
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{figures/data_model.png}
+	\caption{Entity-relationship diagram of the relational structure of the SPbLitGuide dataset}
+    \label{datamodel}
+\end{figure}
+
+\section{Network construction methodology}
+Using the resulting dataset with the list of participants extracted from the event description, we construct an undirected weighted graph based on event co-participation, operating on the premise that shared event attendance indicates social interaction and cultural connection between literary actors. Nodes represent individual participants, while edges represent co-participation in events. 
+
+To account for event size differences, we implement a normalisation strategy that reflects the intuition that interactions in smaller gatherings are likely more significant than those in larger events. For each event, if there are n participants, every participant can potentially interact with (n-1) other participants. Therefore, we assign a weight of 1/(n-1) to each pair of participants in that event. For example, in a small reading with 3 participants, each pair receives a weight of 1/2, while in a large festival panel with 10 participants, each pair receives a weight of 1/9. When participants co-occur in multiple events, their edge weight is the sum of these normalized interaction weights across all shared events.
+
+The complete network consists of 10,656 nodes connected by 106,127 edges, showing a distinct core-periphery structure with 387 separate connected components. The largest connected component contains 9,621 nodes (90\% of the participants), representing the core of the active St Petersburg literary community. This main component has a high clustering coefficient (0.753), indicating strong local group formation, with an average shortest path length of 3.702 and a network diameter of 13. The low network density (0.002) and skewed degree distribution (mean: 19.92, median: 8) reveal a selective and hierarchical structure, where a small number of participants maintain extensive connections while most operate in smaller networks. 
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{figures/gephi_open2.png}
+	\caption{Network visualization of the largest connected component (N = 9,621 nodes). Communities identified by modularity optimization are shown in different colors. Edge weights ≥13 displayed. Layout: OpenOrd algorithm.}
+    \label{component}
+\end{figure}
+
+This network structure exhibits classic "small world" characteristics, combining high local clustering with efficient global connectivity. In particular, the clustering coefficient of our network (0.753) exceeds those found in Broadway musical collaboration networks (0.41, \cite{uzzi}) and scientific collaboration networks (0.45, \cite{newman}), suggesting that literary communities in St. Petersburg form particularly tight local groups. However, this strong local clustering exists alongside multiple unconnected components, reflecting a literary field that combines intense local collaboration with distinct subcommunities.
+
+\subsection{Community detection and basic structure}
+Application of the Louvain community detection algorithm (resolution 1.0) has identified 49 distinct communities within the main component, demonstrating the complex segmentation of the St. Petersburg literary world. These communities show clear differences in size and patterns of activity, with several large groups emerging as particularly significant (see Table \ref{tab:literary-communities}.
+
+\begin{fullwidthtable}
+    \begin{tabular}{@{}llllllp{5cm}@{}}
+        \toprule
+        ID & Size & Events/Year & Clustering & \shortstack{Internal\\Density} & \shortstack{External\\Connections} & Key Figures \\ 
+        \midrule
+        1  & 1363 & 73.55      & 0.772      & 0.014           & 7164 & Vladimir Antipenko\newline Maria Agapova\newline Ilya Zhigunov \\
+        \midrule
+        5  & 1286 & 120.98     & 0.777      & 0.024           & 16603 & Darya Sukhovey\newline Arsen Mirzaev\newline Dmitry Grigoriev \\
+        \midrule
+        3  & 911  & 85.32      & 0.729      & 0.010           & 5180 & Yakov Gordin\newline Andrey Ariev\newline Alexander Kushner \\
+        \midrule
+        0  & 866  & 60.44      & 0.781      & 0.014           & 6633 & Alexander Skidan\newline Pavel Arseniev\newline Arkady Dragomoshchenko \\
+        \midrule
+        4  & 605  & 33.83      & 0.778      & 0.022           & 3107 & Ivan Pinzhenin\newline Roma Gonza\newline Andrey Nekrasov \\
+        \midrule
+        7  & 590  & 70.27      & 0.741      & 0.027           & 8014 & Evgeny Myakishev\newline Evgeny Antipov\newline Galina Ilyukhina \\
+        \midrule
+        17 & 584  & 70.71      & 0.697      & 0.014           & 4244 & Pavel Krusanov\newline Sergey Nosov\newline Alexander Sekatsky \\
+        \bottomrule
+    \end{tabular}
+       \caption{Major Literary Communities in St. Petersburg (1999-2019): Size, Activity, Network Metrics, and Key Figures (sorted by community size). Key figures identified by highest degree centrality within each community, representing the most connected participants}
+    \label{tab:literary-communities}
+\end{fullwidthtable}
+
+The analysis of the largest detected communities in the St. Petersburg literary network finds remarkably similar structural characteristics despite differences in size. While the communities range from 584 to 1363 members, they maintain comparable internal structural metrics: clustering coefficients fall within a narrow range (0.697-0.781) and internal densities are consistently low (0.010-0.024).
+
+The most notable quantitative difference is in external connections, where Community 5 has a much higher connectivity (16,603 external connections) than the other communities (ranging from 4,244 to 8,014). However, this difference in external connections does not correspond to substantial differences in internal structure, as evidenced by the similar clustering and density values.
+
+The consistency of these network metrics across communities of different sizes suggests that literary groups in St. Petersburg tend to develop similar patterns of internal organisation, regardless of their size or central figures. The Louvain algorithm successfully identified stable groupings, but their structural similarities suggest that these communities, while distinct, follow comparable patterns of connection and interaction.
+
+\subsection{Aesthetic Validation of Detected Communities}
+The communities identified through event co-participation by the Louvain algorithm could be qualitatively examined to see if they correlate with known aesthetic groupings or stylistic schools within the St. Petersburg literary scene: as the physical manifestations or activations of these latent, often text-centered, communities of interest, interpretation, and affective connection. We have an opportunity to explore whether these structural cleavages correlate with distinct aesthetic schools, ideological stances, or institutional affiliations that actively maintain boundaries and limit interaction with "outside" groups. For instance, do traditionalist poets, who might cluster in one computationally detected community, consciously avoid (or remain uninvited) to events dominated by experimental poets, who cluster in another? Such dynamics would suggest that the network structure reflects not just passive preference but active processes of distinction and boundary maintenance driven by aesthetic or ideological commitments.
+
+Event co‐participation forms our empirical basis: if two writers frequently appear at the same readings or panels, we infer a latent affinity. Yet an “aesthetic community” implies deeper commonalities — shared poetics, interpretive frameworks, thematic preoccupations — publicly enacted and negotiated at literary gatherings. Because events serve as sites where aesthetics are performed, debated, and transmitted, we can test whether attendance patterns indeed serve as reliable proxies for these richer, affective connections.
+
+Below, we demonstrate three communities identified in Table 1 that map convincingly onto established aesthetic schools, institutional affiliations, and critical networks documented in prior scholarship. 
+
+\textbf{Community 0 (Experimental/Avant-Garde Poetry)}. Key figures: Alexander Skidan, Pavel Arseniev, Arkady Dragomoshchenko (also Dmitry Golynko-Volfson, Roman Osminkin, Galina Rymbu, Natalia Fedorova). \\
+This cluster precisely maps onto what Bozović terms the \textit{Translit} avant-garde circle — a cohesive literary formation with explicit institutional structures, shared experimental poetics, and collective political commitments (\cite{bozovic2023}). The group centers on the \textit{Translit} almanac, where Arseniev serves as co-editor and Skidan sits on the advisory board, creating both institutional coherence and collaborative initiatives like the "Laboratory of Poetic Actionism" (\cite{bozovic2023,platt2017}). Their aesthetic program unites around experimental strategies that synthesize 1920s avant-garde traditions (LEF, Russian Formalism) with contemporary critical theory. Skidan's collage-based, deconstructive poetics and Dragomoshchenko's "quantum" ideogrammatic experiments represent sophisticated engagements with language poetry and conceptual art practices (\cite{hock2021,orlitskiy2017}). Critical recognition confirms their status as a named avant-garde circle with shared poetics, political commitments, and institutional structures (\cite{bozovic2023}). Multiple scholars treat them as a cohesive unit rather than loose affiliations, validating the computational detection of their network boundaries (\cite{hock2021,platt2017,vivaldi2019}).
+
+\textbf{Community 3 (Literary Traditionalism & “Thick Journals”)}. Key figures: Yakov Gordin, Andrey Ariev, Alexander Kushner (also Valery Popov, Samuil Lurie, Natalia Sokolovskaya, Daniil Granin). \\
+This cluster corresponds to St. Petersburg’s established intelligentsia tradition, epitomized by the “thick journal” model — particularly \textit{Zvezda} and \textit{Neva}, and structuring discourse around continuity with Russia’s literary past. Yakov Gordin (historian, writer) and Andrey Ariev (literary scholar, critic, prose writer) have served as co-editors-in-chief of \textit{Zvezda} since 1992. Within Bourdieu’s framework (\cite{bourdieu1983}), they occupy a segment of the field where cultural capital derives from custodianship of tradition rather than avant-garde innovation. The community's defining mindset centers on cultural stewardship and historical consciousness. Rather than pursuing formal experimentation, they embrace what might be termed a "guardianship mentality" — viewing themselves as thoughtful preservers and reinterpreters of Russia's literary inheritance. This orientation manifests in their commitment to neo-classical aesthetics, particularly evident in Alexander Kushner's Neo-Acmeist poetics, which deliberately emphasizes clarity and cultural continuity over radical innovation (\cite{arev2019}. 
+
+\textbf{Community 17 (“New Prose” & Petersburg Fundamentalists).} Key figures: Pavel Krusanov, Sergey Nosov, Alexander Sekatsky (also Tatiana Moskvina, Viktor Toporov, Andrey Astvatsaturov, Nikolai Yakimchuk, Ilya Boyashov). \\
+This group epitomizes the so-called “new prose” movement, often labeled \textit{the Petersburg Fundamentalists}. Krusanov and Nosov’s novels — published by \textit{Amfora} and \textit{Limbus Press} — exemplify an “imperial novel” aesthetic, fusing patriotic or nationalist discourses with mythological motifs and postmodern irony (\cite{fenghi2023}). Sekatsky’s philosophical writings (e.g., \textit{The Mogs and Their Might}) provide the group’s conservative‐esoteric underpinnings (\cite{fenghi2023}). Their work frequently acts as a reaction against 1990s postmodern nihilism, seeking a new cultural myth rooted in neo-Eurasianist and occultist subcultures (\cite{lipovetsky2008, noordenbos2011}). Critical recognition confirms their conscious self-definition as a literary circle, with manifestos, public performances, and dedicated institutional support (\cite{fenghi2023,noordenbos2011}).
+
+The remarkable alignment between algorithmically detected communities and published accounts of St. Petersburg’s literary factions confirms that event co‐participation reliably indexes deeper aesthetic affinities and institutional ties.
+
+\section{Temporal Evolution}
+
+The evolution of St. Petersburg's literary landscape reflects the wider post-Soviet cultural transformation. The launch of SPbLitGuide in 1999 coincided with - and helped to document — a crucial moment when the city's literary scene was being fundamentally reshaped. This period marked the inclusion of previously unofficial literary trends into public visibility, alongside the rise of new independent venues and voices. The increase in the number of documented venues from 1999 to the following years reflects not only improved documentation, but also the formation of a new literary infrastructure that bridged Soviet underground traditions with post-Soviet cultural energies.
+
+The data then show two subsequent major shifts. The first occurred around 2010 and was marked by dramatic growth in both events and venues (Figures \ref{annualevents}-\ref{annualvenues}). The number of active venues increased from 95 to 150, reflecting both the increased coverage following SPbLitGuide's collaboration with \textit{DK Krupskoy} and the actual expansion of the literary scene, particularly with the development of commercial venues such as the \textit{Bookvoed} network.
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{figures/yearly_chart.png}
+	\caption{Annual Event Frequency: the total number of events that occurred each year}
+    \label{annualevents}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{figures/venue_growth.png}
+	\caption{Number of Active Venues}
+    \label{annualvenues}
+\end{figure}
+
+A second shift occurred in 2014, when the economic crisis following geopolitical events had a significant impact on the cultural infrastructure. The sharp decline in the number of venues (from 193 in 2013 to 159 in 2014) particularly affected independent spaces, which were more vulnerable to economic pressures. 
+
+The post-2014 period shows a pattern of resilience and adaptation. While the number of venues fluctuated between 159 and 217, the literary scene maintained a significantly higher baseline than in the pre-2010 period. This resilience suggests that the diversification of literary spaces achieved in the early 2010s created a more solid cultural ecosystem. Traditional institutions provided stability, while surviving independent venues and commercial spaces continued to support diverse forms of literary activity despite economic challenges.
+
+Another perspective on the evolution of St Petersburg's literary landscape is provided by the AI-based classification of event types. Event descriptions were automatically classified using OpenAI's language model (o3-mini) with a predefined taxonomy of 21 tags covering event formats, genres, and characteristics. Each event was assigned up to 4 relevant tags through structured prompts (classification process used OpenAI's batch API with JSON schema validation to ensure consistent output format). The stacked bar chart (Figure \ref{eventtypes}) focuses on four primary content categories: poetry, prose, nonfiction, and children's literature events, illustrating the proportional distribution of these core literary content types over time.
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{figures/proportion_of_event_types_over_time.png}
+	\caption{Proportion of Event Types Over Time}
+    \label{eventtypes}
+\end{figure}
+
+While St Petersburg has always been a poetry city, the graph shows that since 2010, poetry's relative share of events has decreased as the literary scene diversified. This shift reflects not a decline in poetry activities, which remained relatively stable in absolute numbers, but rather significant growth in prose and nonfiction events. The increasing prominence of non-fiction events may indicate a move towards analytical, journalistic and educational discourses within the literary community, in line with wider cultural and intellectual developments in Russia during the 2010s.
+
+The monthly distribution of events (Figure \ref{monthly}) shows consistent seasonal rhythms in St. Petersburg's literary life: activity peaks in the spring (March-May) and autumn (October-December), with a significant decline in the summer months (July-August). This pattern, which lasted throughout the study period, reflects both institutional calendars and established cultural traditions. Even as the literary scene expanded and diversified after 2010, it maintained these characteristic seasonal fluctuations.
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{figures/monthly_chart.png}
+	\caption{Monthly Event Frequency Over the Years}
+    \label{monthly}
+\end{figure}
+
+The variation in venue types (Figure \ref{absolute}-\ref{relative}) highlights significant shifts in the spatial organisation of literary life in St. Petersburg from 1999 to 2019. The most striking change occurred around 2010, marked by the dramatic rise of independent bookstores (shown in dark blue) as cultural spaces. This growth coincided with broader changes in the commercial book trade, but represented a distinct phenomenon: indy bookstores weren't just commercial spaces aimed primarily at the reading public, but became active cultural centres, hosting literary events that were important for literary development and bringing together key figures from the city's literary landscape.
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{figures/venue_types.png}
+	\caption{Annual Distribution of Literary Events by Venue Type in Saint Petersburg, 1999-2019 (absolute numbers)}
+    \label{absolute}
+\end{figure}
+
+Another notable trend is the steady growth of art centers (orange) and alternative cultural spaces (green) throughout the 2000s, which provided flexible venues for literary events outside of traditional institutional frameworks. This diversification of venue types suggests a diversification of literary space away from the Soviet-era model, where literature was primarily housed in official cultural institutions or privately.
+
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{figures/relative_venue_types.png}
+	\caption{Relative Distribution of Literary Events by Venue Type in Saint Petersburg, 1999-2019 (percentage of total events per year)}
+    \label{relative}
+\end{figure}
+
+The data also show the resilience of traditional venues such as museums (red) and educational/academic institutions (purple), which maintained a consistent presence throughout the period. However, their relative share of the overall venue landscape declined as new types of spaces emerged. The growth of cafes and bars (pink) as literary venues, particularly after 2010, indicates another significant shift: the integration of literary events into unconventional settings.
+
+The period after 2014 shows interesting adaptations to economic pressures. While there was some fluctuation in the total number of events, the diversity of venue types remained relatively stable, suggesting that the literary scene had developed sound networks across different types of spaces. 
+
+
+\section{Spatial Evolution}
+
+The spatial dimension of literary events displays the concentration of literary life across St. Petersburg's urban landscape. As shown in Figure \ref{heatmap}, the most intense literary activity is located in the historical centre, particularly in the area bounded by the Fontanka River and Nevsky Prospekt. This core zone has the highest density of events, with notable hotspots around major cultural institutions such as the Akhmatova Museum and the Mayakovsky Library.
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{figures/heatmap.png}
+	\caption{Heat Map of Event Frequency at Various Locations in Saint-Petersburg}
+    \label{heatmap}
+\end{figure}
+
+However, this aggregate view masks significant venue specialization and community-specific spatial preferences. Literary venues in St. Petersburg operate along a spectrum from generalist to highly specialized spaces. Generalist venues such as major bookstore chains (Bukvoed network) and large cultural institutions (Mayakovsky Library) host diverse events across different literary communities and genres. In contrast, culturally engaged venues develop strong aesthetic affiliations: independent bookshops like Poryadok Slov become closely associated with experimental literature and cultural studies communities, while alternative spaces like Fish Fabrique Nouvelle cater to underground and performance-based literary activities. 
+
+Different literary communities exhibit distinct geographical preferences, as illustrated by the comparative analysis of Communities 0 and 4 (Figure \ref{spatial_comparison}). Community 0 (experimental poetry, centred around Alexander Skidan and Pavel Arseniev) demonstrates concentrated activity in the historical centre, with strong clustering around the Poryadok Slov and Andrey Belyj centres. It also includes street events on the Neva embankment and post-industrial spaces such as old marine ports, reflecting their preference for established alternative cultural spaces combined with experimental urban interventions. In contrast, Community 4 (the younger alternative scene, led by Ivan Pinzhenin and Roma Gonza) exhibits a more dispersed pattern, extending into peripheral areas and utilising unconventional venues such as bars and nightclubs.
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/map_community_0.png}
+        \caption{Community 0 (Experimental Poetry)}
+        \label{fig:community0}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/map_community_4.png}
+        \caption{Community 4 (Alternative Scene)}
+        \label{fig:community4}
+    \end{subfigure}
+    \caption{Spatial distribution comparison showing distinct venue preferences and geographical patterns between communities}
+    \label{spatial_comparison}
+\end{figure}
+
+The spatial data also reveals individual literary careers trajectories through venue transitions. Prose authors like German Sadulaev, Andrey Astvatsaturov, and Ilya Stogoff demonstrate a characteristic migration pattern from independent alternative spaces (Platform, Fish Fabrique Nouvelle) to mainstream commercial venues (Dom Knigi, Bukvoed). This spatial mobility reflects not only literary success and increased readership, but also the evolution of authors' relationships with different literary communities and their integration into broader cultural institutions.
+
+This venue-community co-evolution demonstrates how literary groups actively reshape the cultural geography of the city, while individual careers create bridges between different spatial and social literary worlds.
+
+\section{Conclusion}
+
+\textbf{Network structure and community formation. }The St Petersburg literary ecosystem is characterised by dense local clusters with strategic connections. The high clustering coefficient (0.753) suggests that literary activity takes place primarily within established communities, while the presence of influential bridging figures enables cross-community exchange. The hierarchical structure of the network is reflected in the skewed degree distribution, with an average of 19.92 connections but a median of only 8. This disparity suggests that while most participants operate in relatively small circles, certain key figures maintain extensive connections across the literary landscape, acting as crucial nodes for information flow and community bridging. Betweenness centrality analysis confirms the strategic importance of these bridge figures: while the network mean is 0.0003, key intermediaries show dramatically higher values, with Арсен Мирзаев (0.0399), Дмитрий Григорьев (0.0386), and Дарья Суховей (0.0365) emerging as the most critical bridges. These figures, concentrated in Community 5, facilitate the strongest inter-community connections in the network, particularly the extensive links between Communities 0, 5, 7, and 11. The existence of 387 separate components in the network depicts a literary world composed of distinct subcommunities with limited interaction, suggesting that despite the presence of bridge figures, significant barriers to cross-community interaction remain.
+
+\textbf{Spatial and temporal dynamics.} The growth from 13 venues in 1999 to 217 in 2019 represents a massive expansion of cultural infrastructure, even if the trajectory was not linear. A significant decline after 2014 particularly affected independent spaces, while the emergence of commercial venues such as the Bookvoed bookshop chain introduced new patterns of literary participation. Geographically, venues remained concentrated in the historical centre of St. Petersburg, maintaining traditional cultural patterns, while, after 2010, new literary spaces emerged in peripheral areas. Throughout these changes, certain venues, such as Poryadok Slov and the Akhmatova Museum, maintained their positions as community anchors, providing stability in the evolving literary landscape.
+
+\textbf{Historical transitions.} The dataset covers three distinct periods in St. Petersburg's literary evolution. The post-Soviet transformation (1999-2009) saw the integration of formerly unofficial literary trends into public visibility, alongside the emergence of new independent venues and the establishment of regular event cycles. This was followed by a period of commercial expansion (2010-2013), marked by dramatic growth in both events and venues, particularly through the entry of commercial bookstore chains and the diversification of event types. The final period (2014-2019) reflects economic adaptation, characterised by a decline in independent venues, while established institutions have shown resilience and literary events have shifted towards more commercially viable formats. Each period represents not just changes in infrastructure, but fundamental shifts in how literary life is organised and sustained. Significantly, the dataset documents the last major phase of predominantly offline literary activity in St. Petersburg before the dramatic disruptions of 2020-2022. This makes the dataset particularly valuable as a record of literary practices and community structures that have since undergone radical transformation.
+
+\textbf{Methodological Implications and Limitations.} The potential of event-based network analysis for understanding literary communities also has important methodological limitations. It can't capture audience information, and we can only analyse the active participants in literary events, not their full social impact. And our method of network construction, which gives equal weight to all instances of co-participation, may oversimplify the complex nature of literary relationships and interactions, whether those interactions take place in formal institutions or informal settings.
+
+The data collection process itself reflects interesting network dynamics. While SPbLitGuide maintainer Darya Sukhovey personally documented many events, her high centrality in our network analysis (0.37) indicates her position as a trusted information hub. Event organisers actively submitted announcements to the newsletter, recognising its role as a key communication channel for the literary community. This organic flow of information suggests that while the dataset may have initially been selection biased due to its origins, it evolved to capture a broader range of literary activities as the newsletter became an established cultural institution.
+
+\textbf{Future directions}. Similar event-based data may exist for other cities and historical periods, from pre-revolutionary literary chronicles to contemporary cultural news sites. In Russian literary studies alone, several publications document early 20th-century literary gatherings in detail comparable to the dataset (\cite{galushkin, lavrov2002, lavrov2017}). This methodological approach could be applied to the analysis of such historical records, allowing a systematic comparison of literary community structures across periods and locations.
+
+One particularly promising approach is to combine event-based analysis with textual and publication data in order to create comprehensive models of literary community formation. While our event networks capture patterns of social interaction and collaboration, they represent only one dimension of literary relationships. Future research could integrate publication networks (e.g. co-authorship, citation patterns and publisher affiliations), textual influence networks (e.g. intertextuality, stylistic borrowing and translation flows) and institutional networks (e.g. journal editorships, prize committees and academic affiliations) with event participation data. This multi-layered approach would address fundamental questions about how social literary life corresponds to textual production. Do communities that frequently gather together also influence each other's writing? How do patterns of co-participation in events correlate with citation networks, collaborative publications or shared aesthetic preferences? Developing new computational methods to link social and textual data would be required for such integration, but it could further investigate whether the communities we identify through events represent real artistic movements or primarily social phenomena.
+
+A uniquely comprehensive dataset of literary events can illuminate community structures across multiple analytical dimensions. By systematically documenting over 15,000 events between 1999 and 2019, the SPbLitGuide newsletter allows us to combine network, spatial, and temporal approaches to understand literary life in detail. This integrated analysis helps to visualise patterns of community formation and evolution. The dataset's rich documentation of literary life in St. Petersburg before 2019 preserves an original historical record of cultural practices that have since undergone radical change. Combining these different aspects of analysis opens up new possibilities for understanding how cultural communities function and evolve, and provides a framework that could be productively applied to similar historical records from other times and places.
+
+%
+%
+% Acknowledgements, contributions & roles, and references 
+% will be set automatically at the end of the document
+% Please note: All information in acknowledgement.tex and authors.tex 
+% will be anonymized automatically for reviewing
+%
+\end{document}
