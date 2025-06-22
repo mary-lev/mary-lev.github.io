@@ -17,6 +17,10 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Maria Levchenko, an NLP Researcher with a PhD in Russian Language and Literature and Python development experience, uniquely blends her humanities background with technological skills. Her journey began a decade ago, exploring Python and NLP algorithms due to her research interests. Her work on Russian poetry corpora highlighted the potential of word2vec and automatic text processing, motivating her to enhance her software engineering knowledge and tackle larger projects.
+## Maria: The Digital Alchemist of the Humanities
 
-In her roles at EPAM Systems and Welltory, Maria honed her skills in managing and optimizing development processes, particularly implementing machine learning pipelines in real-world applications. Maria Levchenko’s portfolio reflects her as a professional bridging literature, technology, and research, contributing significantly to both academic and technological spheres.
+Equal parts code whisperer and literary detective, Maria is a master's graduate from the University of Bologna who dances seamlessly between AI algorithms and 19th-century novels. By day, she builds intelligent learning systems that guide students through Python with scaffolded support. By night, she decodes the soul of Russian poetry using Word2Vec and aligns multilingual digital editions of *I promessi sposi* with scholarly precision.
+
+She's turned historical OCR into a streamlined pipeline, made TEI sing in a web interface, and brought literary communities to life through social network analysis. Fluent in Python, English, Italian, and Russian (and probably dreaming in regex), Maria can just as easily debug a deployment pipeline as explain semantic drift in amateur poetry.
+
+*What ChatGPT knows about me - derived from our collaboration.*
