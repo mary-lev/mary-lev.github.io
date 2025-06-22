@@ -2,6 +2,7 @@ github_users:
   - mary-lev
 
 github_repos:
+  - mary-lev/bertalign-api
   - mary-lev/Lenta.Ru-News-Dataset
   - mary-lev/spblitguide
   - mary-lev/kamen
