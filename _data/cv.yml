@@ -63,3 +63,11 @@
       institution: SysBlok.ru Digital Humanities Magazine
       year: 2024
       description: Firsthand account of Digital Humanities development in China
+
+- title: Software Projects
+  type: time_table
+  contents:
+    - title: "BertAlign API: Multilingual Sentence Alignment Service"
+      institution: DiScEPT Project - Istituto Italiano di Studi Germanici
+      year: 2024
+      description: FastAPI-based web service for multilingual sentence alignment using LaBSE embeddings, developed as part of DiScEPT (Digital Scholarly Editions Platform and aligned Translations). Supports 25 languages, TEI XML documents, and flexible alignment patterns for digital scholarly editions.
