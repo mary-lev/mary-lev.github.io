@@ -1,0 +1,12 @@
+“LeggoManzoni: A Multilingual Digital Edition for Translation Studies”. Comparative Literature Goes Digital. Mini-conference. ADHO Digital Humanities Conference 2025. Lisbon, Portugal. 14-18 July 2025.
+“AI-Supported Scaffolded Learning for Teaching Python in Digital Humanities Education”. ADHO Digital Humanities Conference 2025. Lisbon, Portugal. 14-18 July 2025.
+“Computational Analysis of Literary Communities: Event-Based Social Network Study of St. Petersburg 1999-2019". 4th Annual Conference of Computational Literary Studies 2025. Krakow, Poland. 3-4 July 2025.
+“TEI Encoding as a Unified Structure for Multilingual Digital Editions: The LeggoManzoni Case Study”. AIUCD-2025: The 14th Annual Conference of the Association of Digital Humanities and Digital Culture. 11-13th June 2025, Verona, Italy.
+Subject Indexing, Chatbot, and Computational Text Analysis in Zemelah.online: A Digital Archive of Soviet-Era Jewish Egodocuments. The Israeli International Conference on Digital Humanities and Social Sciences 2025. 10th June 2025. The Open University of Israel, Ra'anana, Israel.
+“Literary Communities in Saint Petersburg 1999-2019”. Graphs & Networks Conference 2025. Università della Svizzera italiana. 13-14th February 2025, Mendrisio, Switzerland
+“St. Petersburg Literary Network (based on the SPbLitGuide newsletters)”. National Research and Project Seminar 'Digital Humanities Projects: Models, Problems, Prospects'. DH-Russia. 31th January 2025, Moscow, Russia.
+“Automatic Translation Alignment Pipeline for Multilingual Digital Editions of Literary Works” Computational Humanities Research 2024. Aarhus University, Denmark, December 4-6, 2024.
+“СтихиРу vs поэтический канон: к вопросу о количественном измерении графомании” Графомания. Русская литература и ее границы. Institute of Russian Literature. Saint Petersburg, Russia. October 7-8, 2024.
+“Manual and Automatic Alignment of I Promessi Sposi: Results and Open Issues.” Aligned Translations for Digital Scholarly Editions: Methodologies, Methods, and Workflows. Istituto Italiano di Studi Germanici. Roma, Italy (26-27th September 2024).
+‘Mapping Literary Space: A Social Network from the Timeline of Cultural Events” ADHO Digital Humanities Conference 2024: Reinvention & Responsibility.  George Mason University, Washington, DC, USA (6-9 August 2024).
+Beatrice Nava, Giulia Menna, Mariia Levchenko. “Quaranta commenti alla Quarantana” Manzoni e Leopardi in digitale. Bologna, Italy, 19-21 settembre 2023.
