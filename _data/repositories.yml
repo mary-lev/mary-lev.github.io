@@ -4,6 +4,7 @@ github_users:
 github_repos:
   - mary-lev/bertalign-api
   - mary-lev/alto2tei
+  - mary-lev/historical-ocr-analysis
   - mary-lev/Lenta.Ru-News-Dataset
   - mary-lev/spblitguide
   - mary-lev/kamen

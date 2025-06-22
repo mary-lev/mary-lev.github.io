@@ -76,3 +76,8 @@
       institution: Digital Humanities Research
       year: 2024
       description: Python toolkit for converting eScriptorium ALTO XML files to TEI format with Segmonto ontology support. Features page-level and book-level conversion modes, YAML-driven configuration, and advanced cross-page paragraph merging for historical document processing.
+
+    - title: "Historical OCR Analysis: LLM Performance Visualization Platform"
+      institution: Digital Humanities Research
+      year: 2024
+      description: React-based web application for analyzing OCR model performance on 18th century Russian documents. Supports research on LLM historical linguistic competence with interactive visualization of 1,029 historical documents and 12 state-of-the-art language models.
