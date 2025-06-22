@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Computational Analysis of Literary Communities: Event-Based Social Network Study"
+title: "Computational Analysis of Literary Communities: Event-Based Social Network Study of St. Petersburg 1999-2019"
 date: 2025-07-03 09:00:00 +0000
 categories: conferences computational-literary-studies upcoming
 description: 4th Annual Conference of Computational Literary Studies 2025, Krakow, Poland (Upcoming)
@@ -9,72 +9,49 @@ tags: computational-literary-studies social-network-analysis event-based-analysi
 
 ## Upcoming Presentation
 
-I will be presenting my comprehensive study of literary communities at the 4th Annual Conference of Computational Literary Studies 2025 in Krakow, Poland. This presentation will detail the event-based social network analysis of Saint Petersburg's literary landscape from 1999 to 2019.
+I will be presenting my research on Saint Petersburg's literary ecosystem at the 4th Annual Conference of Computational Literary Studies 2025 in Krakow, Poland. This study analyzes 20 years of literary community formation through a unique computational approach based on cultural event participation.
 
-## Conference Significance
+## Research Overview
 
-The Conference of Computational Literary Studies brings together researchers at the intersection of literary studies and computational methods, making it the ideal venue for presenting work that bridges traditional literary scholarship with quantitative analysis.
+Rather than studying literary networks through texts or correspondence, this research examines how literary communities form through shared participation in cultural events — readings, book launches, discussions, and festivals. Using data from the SPbLitGuide newsletter (1999-2019), the study maps the social structure of Saint Petersburg's literary world during a crucial period of post-Soviet cultural transformation.
 
-## Research Methodology
+The study processes **15,012 cultural events** involving **11,777 participants** across **862 venues**, creating a network based on event co-participation. Participants who attend events together are connected in the network, with edge weights adjusted for event size (smaller gatherings indicate stronger connections).
 
-This study will employ event-based social network analysis, a novel approach that:
+## Major Findings
 
-### Event-Centered Analysis
-- **Events as network nodes**: Literary events serve as connection points between actors
-- **Temporal dynamics**: Tracking how events create and maintain community ties
-- **Institutional mapping**: Understanding the role of venues and organizations
+### Network Structure
+- **10,656 participants** connected by **106,127 relationships**
+- **49 distinct communities** identified through algorithmic analysis
+- High clustering coefficient (0.753) indicates tight local groups
+- Several communities map precisely onto known aesthetic schools (experimental avant-garde, literary traditionalists, "new prose" movement)
 
-### Network Construction
-- **Bipartite networks**: Connecting people to events and events to people
-- **Temporal layers**: Analyzing network evolution across different time periods
-- **Multi-dimensional analysis**: Considering different types of connections and relationships
+### Historical Periods
+1. **Post-Soviet transformation (1999-2009)**: Integration of unofficial literature into public visibility
+2. **Commercial expansion (2010-2013)**: Dramatic growth in venues and events, rise of bookstore chains as cultural spaces  
+3. **Economic adaptation (2014-2019)**: Resilience despite economic pressures, diversification of venue types
 
-## Data and Scope
+### Spatial Patterns
+- **Geographic concentration** in Saint Petersburg's historic center
+- **Community-specific venue preferences**: experimental poets favor alternative spaces, traditionalists use established institutions
+- **Career trajectories** visible through authors' migration from alternative to mainstream venues
 
-The research utilized:
-- **20 years of data**: SPbLitGuide newsletters from 1999-2019
-- **Thousands of events**: Literary readings, book launches, conferences, workshops
-- **Diverse participants**: Authors, critics, publishers, cultural institutions
-- **Multiple venues**: From major cultural centers to small literary cafes
+## Methodological Innovation
 
-## Expected Findings
+This **event-based approach** offers unique advantages:
+- Captures **ephemeral interactions** that leave few textual traces
+- Reveals **hidden figures** (organizers, moderators) essential to literary networks
+- Maps **concrete geographies** and temporal rhythms of literary engagement
+- Documents **actual participation patterns** rather than declared affiliations
 
-The analysis is expected to reveal:
+## Historical Significance
 
-### Community Structure
-- **Distinct literary circles**: Different aesthetic and generational communities
-- **Cross-community bridges**: Events and individuals connecting separate groups
-- **Hierarchical organization**: Core and peripheral participants in the literary field
+The dataset covers the **last decades of predominantly offline literary life** in Saint Petersburg before digital and geopolitical disruptions of 2020-2022, preserving a crucial record of cultural practices that have since been fundamentally transformed.
 
-### Temporal Evolution
-- **Cyclical patterns**: Seasonal and annual rhythms in literary activity
-- **Historical transitions**: How political and economic changes affected literary networks
-- **Generational shifts**: Evolution of literary communities over time
+## Resources
 
-### Institutional Role
-- **Venue importance**: How specific locations shaped literary community formation
-- **Organizational influence**: The role of cultural institutions in network structure
-- **Event types**: Different kinds of literary events and their network effects
-
-## Methodological Contributions
-
-This work advances computational literary studies by:
-- **Event-based modeling**: New approaches to understanding cultural networks
-- **Temporal network analysis**: Methods for studying community evolution
-- **Cultural data processing**: Techniques for analyzing humanities data
-- **Interdisciplinary methods**: Bridging network science and literary studies
-
-## Broader Impact
-
-The research demonstrates:
-- How computational methods can illuminate literary history
-- The value of long-term cultural data analysis
-- New possibilities for understanding creative communities
-- The importance of local cultural ecosystems
-
-## Publication Plans
-
-The full paper will be submitted to the Journal of Computational Literary Studies, providing detailed methodology and comprehensive results that can inform future research in computational approaches to literary community analysis.
+- **Conference Paper**: [PDF](https://tuprints.ulb.tu-darmstadt.de/30141/1/4217_Computational_Analysis_of_Literary_Communities_Conference_Version.pdf)
+- **Dataset**: [Zenodo](https://zenodo.org/records/13753154)
+- **Code**: [GitHub](https://github.com/mary-lev/literary_communities)
 
 **Conference dates**: July 3-4, 2025  
 **Location**: Krakow, Poland  

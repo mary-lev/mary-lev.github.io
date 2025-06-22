@@ -1,59 +1,72 @@
 ---
 layout: post
-title: "Subject Indexing, Chatbot, and Computational Text Analysis in Zemelah.online"
+title: "Subject Indexing, Chatbot, and Computational Text Analysis in Zemelah.online: A Digital Archive of Soviet-Era Jewish Egodocuments"
 date: 2025-06-10 09:00:00 +0000
 categories: conferences digital-archives
 description: Israeli International Conference on Digital Humanities and Social Sciences, Ra'anana, Israel
-tags: digital-archives jewish-studies computational-text-analysis chatbot NLP
+tags: digital-archives jewish-studies topic-modeling LDA sentiment-analysis chatbot
 ---
 
-I presented my work on the Zemelah.online digital archive at the Israeli International Conference on Digital Humanities and Social Sciences at The Open University of Israel in Ra'anana. The presentation focused on advanced digital methods for organizing and accessing Soviet-era Jewish egodocuments.
+I will be presenting my collaborative work with Anastasia Glazanova (The Central Archives for the History of the Jewish People) on the Zemelah.online digital archive at the Israeli International Conference on Digital Humanities and Social Sciences at The Open University of Israel in Ra'anana.
 
 ## Project Overview
 
-Zemelah.online is a digital archive of Soviet-era Jewish egodocuments that combines traditional archival methods with cutting-edge computational approaches to enhance discoverability and user interaction with historical materials.
+Zemelah.online is a digital archive preserving and analyzing Soviet-era Jewish egodocuments. Our collection encompasses diverse material types: handwritten manuscripts, typewritten documents, and small-edition publications produced for family and friends. The project reveals diverse experiences that challenge conventional scholarly frameworks — from stories of victimhood to achievement, from acculturation to religious observance.
 
-## Technical Components
+## Evolution with AI Technology
 
-The project integrates three main computational approaches:
+Beginning in late 2020, the project has evolved significantly alongside rapid developments in Large Language Models since 2023:
 
-### Subject Indexing
-- **Automated classification**: Using NLP techniques to categorize documents by topic
-- **Semantic tagging**: Identifying key themes and concepts across the collection
-- **Multilingual processing**: Handling documents in multiple languages (Russian, Yiddish, Hebrew)
+### Initial Phase (2020-2023)
+- Systematic document processing and qualitative text analysis
+- Manual indexing of key entities (locations, persons, organizations)
+- Thematic content indexing covering Jewish-specific and universal subjects
 
-### Chatbot Interface
-- **Natural language queries**: Allowing users to ask questions about the archive in natural language
-- **Context-aware responses**: Providing relevant document suggestions based on user interests
-- **Educational support**: Helping researchers and students navigate the collection
+### AI Integration Phase (2023-present)
+- **Markup editor** with pre-annotation using Claude and fixed tag sets
+- **GPT-powered chatbot** enabling thematic queries and text fragment retrieval
+- **Computational text analysis** using multiple methodological approaches
 
-### Computational Text Analysis
-- **Named entity recognition**: Identifying people, places, and organizations
-- **Temporal analysis**: Tracking changes in themes and language over time
-- **Network analysis**: Mapping relationships between documents and entities
+## Computational Analysis Methods
 
-## Research Significance
+### Topic Modeling with LDA
+Using Latent Dirichlet Allocation, we identified **8 distinct thematic clusters** in Soviet Jewish narratives:
 
-This work addresses several important challenges:
-- **Accessibility**: Making historical documents more discoverable
-- **Preservation**: Ensuring cultural heritage materials remain accessible
-- **Research support**: Providing tools for scholars studying Soviet Jewish history
-- **Public engagement**: Making archives accessible to broader audiences
+- **Family/Childhood** (20.96% - most prevalent theme)
+- **Personal Correspondence**
+- **Soviet Jewish Experience** 
+- **Military/Navy Life**
+- **War/Holocaust narratives**
+- **Professional/Medical narratives**
 
-## Methodological Innovation
+### Key Finding: Narrative Separation
+A statistically significant **negative correlation (-0.32)** between Family/Childhood narratives and Soviet Jewish Experience topics reveals a compelling narrative strategy: authors tend to separate intimate family memories from institutional/political experiences, creating distinct storytelling modes that reflect complex navigation of private and public spheres in Soviet Jewish life.
 
-The project demonstrates how:
-- AI can enhance traditional archival practice
-- Computational methods can support humanities research
-- Digital tools can preserve and present cultural heritage
-- Interdisciplinary collaboration enriches both fields
+### Technical Implementation
+- **Russian-specific preprocessing**: Modified stopword lists for memoir narratives
+- **pymorphy2** for Russian lemmatization
+- **Optimal parameters**: 8 topics with document-topic prior (alpha) of 0.1 and topic-word prior (beta) of 0.01
+- **Cross-validation** for empirical parameter determination
 
-## Impact
+## Ongoing Research Directions
 
-The Zemelah.online project serves as a model for:
-- Digital archive development
-- Computational humanities applications
-- Cultural heritage preservation
-- Public history initiatives
+- **Sentiment analysis** to map emotional patterns across the corpus
+- **Word embeddings (word2vec)** to visualize semantic networks
+- **Multi-method correlation analysis** examining how themes relate to emotional expression
 
-This work contributes to the broader field of digital humanities by showing how advanced computational methods can make historical collections more accessible while preserving their scholarly integrity.
+## Research Impact
+
+This project demonstrates how "ordinary" Soviet Jews documented their experiences, providing computational insights into:
+- Narrative strategies in historical ego-documents
+- Private vs. public sphere navigation in Soviet Jewish life
+- Emotional and semantic patterns in memoir writing
+- Digital preservation of cultural heritage materials
+
+## Resources
+
+- **Code Repository**: [GitHub](https://github.com/mary-lev/topic_modeling)
+- **Project Website**: Zemelah.online
+
+**Conference dates**: June 10, 2025  
+**Location**: Ra'anana, Israel  
+**Event**: Israeli International Conference on Digital Humanities and Social Sciences 2025
