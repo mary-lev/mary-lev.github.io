@@ -81,3 +81,8 @@
       institution: Digital Humanities Research
       year: 2024
       description: React-based web application for analyzing OCR model performance on 18th century Russian documents. Supports research on LLM historical linguistic competence with interactive visualization of 1,029 historical documents and 12 state-of-the-art language models.
+
+    - title: "NER Models Evaluation: Russian Cultural Texts Analysis"
+      institution: Digital Humanities Research
+      year: 2024
+      description: Comprehensive evaluation framework comparing traditional NER approaches with modern LLM-based methods on Russian cultural texts. Features modular system supporting spaCy, DeepPavlov, and OpenAI models with statistical significance testing on SPbLitGuide dataset (15,012 cultural event records, 1999-2019).
